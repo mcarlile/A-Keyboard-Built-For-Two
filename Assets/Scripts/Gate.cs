@@ -13,6 +13,7 @@ public class Gate : MonoBehaviour
 		public GameObject dBox;
 		public GameObject eBox;
 		public GameObject pBox;
+		public AudioClip gateSound;
 	
 	
 		// Use this for initialization
@@ -32,6 +33,7 @@ public class Gate : MonoBehaviour
 				if (Input.GetKey (KeyCode.A)) {
 						aBox.renderer.material.SetColor ("_Color", openColor);
 						aBox.gameObject.collider.isTrigger = true;
+						PlaySound ();
 				} else {
 						aBox.renderer.material.SetColor ("_Color", closedColor);
 						aBox.gameObject.collider.isTrigger = false;
@@ -77,6 +79,11 @@ public class Gate : MonoBehaviour
 						pBox.gameObject.collider.isTrigger = false;
 				}
 	
+		}
+
+		public void PlaySound ()
+		{
+				audio.PlayOneShot (gateSound, 0.7F);
 		}
 	
 }
