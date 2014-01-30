@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Follow.cs" />
      <Compile Include="Assets\Scripts\Gate.cs" />
      <Compile Include="Assets\Scripts\Manager.cs" />
   </ItemGroup>

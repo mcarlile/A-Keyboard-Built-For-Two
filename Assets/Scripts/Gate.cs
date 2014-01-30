@@ -11,6 +11,8 @@ public class Gate : MonoBehaviour
 		public GameObject bBox;
 		public GameObject cBox;
 		public GameObject dBox;
+		public GameObject eBox;
+		public GameObject pBox;
 	
 	
 		// Use this for initialization
@@ -20,6 +22,8 @@ public class Gate : MonoBehaviour
 				bBox.gameObject.renderer.material.SetColor ("_Color", closedColor);
 				cBox.gameObject.renderer.material.SetColor ("_Color", closedColor);
 				dBox.gameObject.renderer.material.SetColor ("_Color", closedColor);
+				eBox.gameObject.renderer.material.SetColor ("_Color", closedColor);
+				pBox.gameObject.renderer.material.SetColor ("_Color", closedColor);
 		}
 	
 		// Update is called once per frame
@@ -56,6 +60,23 @@ public class Gate : MonoBehaviour
 						dBox.renderer.material.SetColor ("_Color", closedColor);
 						dBox.gameObject.collider.isTrigger = false;
 				}
+
+				if (Input.GetKey (KeyCode.E)) {
+						eBox.renderer.material.SetColor ("_Color", openColor);
+						eBox.gameObject.collider.isTrigger = true;
+				} else {
+						eBox.renderer.material.SetColor ("_Color", closedColor);
+						eBox.gameObject.collider.isTrigger = false;
+				}
+
+				if (Input.GetKey (KeyCode.P)) {
+						pBox.renderer.material.SetColor ("_Color", openColor);
+						pBox.gameObject.collider.isTrigger = true;
+				} else {
+						pBox.renderer.material.SetColor ("_Color", closedColor);
+						pBox.gameObject.collider.isTrigger = false;
+				}
+	
 		}
 	
 }
