@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 
 Project("{ADAD36AD-70D9-92CB-8FFA-E92247C95E7B}") = "A-Keyboard-Built-For-Two", "Assembly-CSharp.csproj", "{6005F5BB-FBA8-2F10-8227-55721C49A1C2}"
 EndProject
+Project("{ADAD36AD-70D9-92CB-8FFA-E92247C95E7B}") = "A-Keyboard-Built-For-Two", "Assembly-UnityScript.unityproj", "{55189168-3838-EA1D-643F-84BD062FB0EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,11 +15,15 @@ Global
 		{6005F5BB-FBA8-2F10-8227-55721C49A1C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6005F5BB-FBA8-2F10-8227-55721C49A1C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6005F5BB-FBA8-2F10-8227-55721C49A1C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55189168-3838-EA1D-643F-84BD062FB0EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55189168-3838-EA1D-643F-84BD062FB0EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55189168-3838-EA1D-643F-84BD062FB0EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55189168-3838-EA1D-643F-84BD062FB0EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-				GlobalSection(MonoDevelopProperties) = preSolution
+									GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
