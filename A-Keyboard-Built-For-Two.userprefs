@@ -1,0 +1,14 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Gate.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Gate.cs" Line="54" Column="8" />
+      <File FileName="../Tapper/Tapper (No Sprites)/Assets/scripts/Player.cs" Line="35" Column="65" />
+      <File FileName="Assets/Manager.cs" Line="18" Column="4" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
