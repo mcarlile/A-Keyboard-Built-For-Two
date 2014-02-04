@@ -40,8 +40,7 @@ public class Bottom : MonoBehaviour
 		{
 				if (Input.GetKeyDown (KeyCode.Escape)) {
 						if (otherCollider.gameObject.name.Contains ("Ball")) {
-								Application.Quit ();
-								Debug.Log ("tried to quit");
+								Application.LoadLevel (2);
 						}
 				}
 		

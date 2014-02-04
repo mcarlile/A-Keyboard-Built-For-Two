@@ -2,7 +2,7 @@
 using System.Collections;
 using McKenzie_Carlile;
 
-public class Control : MonoBehaviour
+public class Credits : MonoBehaviour
 {
 
 		// Use this for initialization
@@ -14,13 +14,8 @@ public class Control : MonoBehaviour
 		// Update is called once per frame
 		void Update ()
 		{
-	
-				if (Input.GetKeyDown (KeyCode.Space)) {
-						Application.LoadLevel (1);
-				}
-
 				if (Input.GetKeyDown (KeyCode.Escape)) {
-						Application.LoadLevel (2);
+						Application.LoadLevel (0);
 				}
 		}
 }

@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-
 using McKenzie_Carlile;
 
 public class Trigger : MonoBehaviour
