@@ -6,11 +6,11 @@ public class Manager : MonoBehaviour
 
 		public Color openColor;
 		public Color closedColor;
-		public GameObject bBox;
-		public GameObject cBox;
-		public GameObject dBox;
-		public GameObject eBox;
-		public GameObject pBox;
+		public GameObject player2winsleft;
+		public GameObject player2winsright;
+		public GameObject player1winsleft;
+		public GameObject player1winsright;
+		public bool gameOver = false;
 		public AudioClip gateSound;
 		public GameObject[] aBoxes;
 		public GameObject[] bBoxes;
@@ -415,6 +415,23 @@ public class Manager : MonoBehaviour
 		public void PlaySound ()
 		{
 				audio.PlayOneShot (gateSound, 0.7F);
+		}
+
+		public void Player1Wins ()
+		{
+				if (!gameOver) {
+						player1winsleft.SetActive (true);
+						player1winsright.SetActive (true);
+				}
+			
+		}
+
+		public void Player2Wins ()
+		{
+				if (!gameOver) {
+						player2winsleft.SetActive (true);
+						player2winsright.SetActive (true);
+				}
 		}
 	
 }
