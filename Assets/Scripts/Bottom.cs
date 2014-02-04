@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using McKenzie_Carlile;
 
 public class Bottom : MonoBehaviour
 {
@@ -21,11 +22,11 @@ public class Bottom : MonoBehaviour
 		void OnTriggerEnter (Collider otherCollider)
 		{
 				if (otherCollider.gameObject.name.Contains ("Ball1")) {
-						manager.GetComponent<Manager> ().Player1Wins ();
+						manager.GetComponent<Manager> ().Player1EnteredFirst ();
 				}
 
 				if (otherCollider.gameObject.name.Contains ("Ball2")) {
-						manager.GetComponent<Manager> ().Player2Wins ();
+						manager.GetComponent<Manager> ().Player2EnteredFirst ();
 				}
 		}
 }
