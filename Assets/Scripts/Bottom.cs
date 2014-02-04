@@ -21,12 +21,33 @@ public class Bottom : MonoBehaviour
 
 		void OnTriggerEnter (Collider otherCollider)
 		{
+				manager.GetComponent<Manager> ().HidePlayerNumbers ();
+				
+
+		
 				if (otherCollider.gameObject.name.Contains ("Ball1")) {
 						manager.GetComponent<Manager> ().Player1EnteredFirst ();
+						manager.GetComponent<Manager> ().ShowInstructions ();
 				}
 
 				if (otherCollider.gameObject.name.Contains ("Ball2")) {
 						manager.GetComponent<Manager> ().Player2EnteredFirst ();
+						manager.GetComponent<Manager> ().ShowInstructions ();
+				}
+		}
+
+		void OnTriggerStay (Collider otherCollider)
+		{
+				if (Input.GetKeyDown (KeyCode.Escape)) {
+						Application.Quit ();
+						Debug.Log ("tried to quit");
+				}
+		
+				if (Input.GetKeyDown (KeyCode.Space)) {
+						Application.LoadLevel (1);
+						Debug.Log ("tried to reload level");
 				}
 		}
 }
+	
+

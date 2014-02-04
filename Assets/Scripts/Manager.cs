@@ -8,6 +8,11 @@ namespace McKenzie_Carlile
 
 				public Color openColor;
 				public Color closedColor;
+				public Color readyColor;
+				public GameObject player1Instructions;
+				public GameObject player2Instructions;
+				public GameObject startGate1;
+				public GameObject startGate2;
 				public GameObject player1indicator;
 				public GameObject player2indicator;
 				public GameObject player2winsleft;
@@ -43,6 +48,7 @@ namespace McKenzie_Carlile
 				public GameObject[] xBoxes;
 				public GameObject[] yBoxes;
 				public GameObject[] zBoxes;
+				public GameObject[] startBoxes;
 	
 				// Use this for initialization
 				void Start ()
@@ -74,11 +80,38 @@ namespace McKenzie_Carlile
 						xBoxes = GameObject.FindGameObjectsWithTag ("X");
 						yBoxes = GameObject.FindGameObjectsWithTag ("Y");
 						zBoxes = GameObject.FindGameObjectsWithTag ("Z");
+						startBoxes = GameObject.FindGameObjectsWithTag ("Start");
+
 				}
 	
 				// Update is called once per frame
 				void Update ()
 				{
+
+						if ((Input.GetKey (KeyCode.G)) || (Input.GetKey (KeyCode.H))) {
+								foreach (GameObject box in startBoxes) {
+										box.renderer.material.SetColor ("_Color", readyColor);
+					
+								}
+
+								if ((Input.GetKey (KeyCode.G)) && (Input.GetKey (KeyCode.H))) {
+										foreach (GameObject box in startBoxes) {
+												box.renderer.material.SetColor ("_Color", openColor);
+												box.gameObject.collider.isTrigger = true;
+												startGate1.gameObject.collider.isTrigger = true;
+												startGate2.gameObject.collider.isTrigger = true;
+										}
+								}
+						} else {
+								foreach (GameObject box in startBoxes) {
+										box.renderer.material.SetColor ("_Color", closedColor);
+										box.gameObject.collider.isTrigger = false;
+								}
+						}
+			
+						if (Input.GetKeyDown (KeyCode.A)) {
+								audio.PlayOneShot (gateSound);
+						}
 
 						if (Input.GetKey (KeyCode.Space)) {
 								foreach (GameObject box in spaceBoxes) {
@@ -541,6 +574,19 @@ namespace McKenzie_Carlile
 						player1indicator.SetActive (true);
 						player2indicator.SetActive (true);
 				}
-	
+
+				public void HidePlayerNumbers ()
+				{
+						player1indicator.SetActive (false);
+						player2indicator.SetActive (false);
+				}
+
+				public void ShowInstructions ()
+				{
+						player1Instructions.SetActive (true);
+						player2Instructions.SetActive (true);
+				}
+		
+		
 		}
 }
