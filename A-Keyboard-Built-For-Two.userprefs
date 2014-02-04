@@ -1,12 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Trigger.cs">
     <Files>
       <File FileName="Assets/Scripts/Follow.cs" Line="4" Column="1" />
-      <File FileName="Assets/Scripts/Manager.cs" Line="555" Column="20" />
-      <File FileName="Assets/Scripts/Control.cs" Line="18" Column="9" />
-      <File FileName="Assets/Scripts/Bottom.cs" Line="25" Column="7" />
-      <File FileName="Assets/Scripts/Trigger.cs" Line="4" Column="24" />
+      <File FileName="Assets/Scripts/Manager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Control.cs" Line="20" Column="4" />
+      <File FileName="Assets/Scripts/Bottom.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Trigger.cs" Line="22" Column="47" />
+      <File FileName="Assets/Scripts/DoNotDestroy.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

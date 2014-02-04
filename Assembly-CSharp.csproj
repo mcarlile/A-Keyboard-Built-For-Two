@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\DoNotDestroy.cs" />
      <Compile Include="Assets\Scripts\Follow.cs" />
      <Compile Include="Assets\Scripts\Manager.cs" />
+     <Compile Include="Assets\Scripts\StartTrigger.cs" />
      <Compile Include="Assets\Scripts\Trigger.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

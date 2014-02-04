@@ -20,6 +20,9 @@ namespace McKenzie_Carlile
 				public GameObject player1winsleft;
 				public GameObject player1winsright;
 				public bool gameOver = false;
+				bool ball1InPosition = false;
+				bool ball2InPosition = false;
+				bool allowStart = false;
 				public AudioClip gateSound;
 				public GameObject[] spaceBoxes;
 				public GameObject[] aBoxes;
@@ -87,14 +90,17 @@ namespace McKenzie_Carlile
 				// Update is called once per frame
 				void Update ()
 				{
-
+						if ((ball1InPosition == true) && (ball2InPosition == true)) {
+								allowStart = true;
+						}
+			
 						if ((Input.GetKey (KeyCode.G)) || (Input.GetKey (KeyCode.H))) {
 								foreach (GameObject box in startBoxes) {
 										box.renderer.material.SetColor ("_Color", readyColor);
 					
 								}
 
-								if ((Input.GetKey (KeyCode.G)) && (Input.GetKey (KeyCode.H))) {
+								if ((Input.GetKey (KeyCode.G)) && (Input.GetKey (KeyCode.H)) && (allowStart == true)) {
 										foreach (GameObject box in startBoxes) {
 												box.renderer.material.SetColor ("_Color", openColor);
 												box.gameObject.collider.isTrigger = true;
@@ -585,6 +591,16 @@ namespace McKenzie_Carlile
 				{
 						player1Instructions.SetActive (true);
 						player2Instructions.SetActive (true);
+				}
+
+				public void BallOneInPosition ()
+				{
+						ball1InPosition = true;
+				}
+
+				public void BallTwoInPosition ()
+				{
+						ball2InPosition = true;
 				}
 		
 		
