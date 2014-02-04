@@ -39,13 +39,17 @@ public class Bottom : MonoBehaviour
 		void OnTriggerStay (Collider otherCollider)
 		{
 				if (Input.GetKeyDown (KeyCode.Escape)) {
-						Application.Quit ();
-						Debug.Log ("tried to quit");
+						if (otherCollider.gameObject.name.Contains ("Ball")) {
+								Application.Quit ();
+								Debug.Log ("tried to quit");
+						}
 				}
 		
 				if (Input.GetKeyDown (KeyCode.Space)) {
-						Application.LoadLevel (1);
-						Debug.Log ("tried to reload level");
+						if (otherCollider.gameObject.name.Contains ("Ball")) {
+								Application.LoadLevel (1);
+								Debug.Log ("tried to reload level");
+						}
 				}
 		}
 }
