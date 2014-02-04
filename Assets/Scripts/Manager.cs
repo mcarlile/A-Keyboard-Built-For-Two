@@ -8,12 +8,15 @@ namespace McKenzie_Carlile
 
 				public Color openColor;
 				public Color closedColor;
+				public GameObject player1indicator;
+				public GameObject player2indicator;
 				public GameObject player2winsleft;
 				public GameObject player2winsright;
 				public GameObject player1winsleft;
 				public GameObject player1winsright;
 				public bool gameOver = false;
 				public AudioClip gateSound;
+				public GameObject[] spaceBoxes;
 				public GameObject[] aBoxes;
 				public GameObject[] bBoxes;
 				public GameObject[] cBoxes;
@@ -44,6 +47,7 @@ namespace McKenzie_Carlile
 				// Use this for initialization
 				void Start ()
 				{
+						spaceBoxes = GameObject.FindGameObjectsWithTag ("Space");
 						aBoxes = GameObject.FindGameObjectsWithTag ("A");
 						bBoxes = GameObject.FindGameObjectsWithTag ("B");
 						cBoxes = GameObject.FindGameObjectsWithTag ("C");
@@ -75,6 +79,24 @@ namespace McKenzie_Carlile
 				// Update is called once per frame
 				void Update ()
 				{
+
+						if (Input.GetKey (KeyCode.Space)) {
+								foreach (GameObject box in spaceBoxes) {
+										box.renderer.material.SetColor ("_Color", openColor);
+										box.gameObject.collider.isTrigger = true;
+					
+								}
+						} else {
+								foreach (GameObject box in spaceBoxes) {
+										box.renderer.material.SetColor ("_Color", Color.black);
+										box.gameObject.collider.isTrigger = false;
+								}
+						}
+			
+						if (Input.GetKeyDown (KeyCode.A)) {
+								audio.PlayOneShot (gateSound);
+						}
+
 						if (Input.GetKey (KeyCode.A)) {
 								foreach (GameObject box in aBoxes) {
 										box.renderer.material.SetColor ("_Color", openColor);
@@ -512,6 +534,12 @@ namespace McKenzie_Carlile
 								player2winsleft.SetActive (true);
 								player2winsright.SetActive (true);
 						}
+				}
+
+				public void ShowPlayerNumbers ()
+				{
+						player1indicator.SetActive (true);
+						player2indicator.SetActive (true);
 				}
 	
 		}
